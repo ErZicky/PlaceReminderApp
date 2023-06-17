@@ -83,6 +83,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="EMt-Ox-JBp"/>
                     <connections>
+                        <outlet property="BackgroundView" destination="8bC-Xf-vdC" id="aeU-g7-tEt"/>
                         <outlet property="CoordinateText" destination="NOJ-fQ-fWN" id="yDV-qb-OIi"/>
                         <outlet property="DescText" destination="BNi-tQ-iao" id="2a8-yA-0G8"/>
                         <outlet property="ErrorLabel" destination="9wg-ba-6SV" id="pR4-sN-oRg"/>

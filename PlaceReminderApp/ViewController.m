@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *DescText;
 
 @property (strong, nonatomic) IBOutlet UILabel *ErrorLabel;
+@property (strong, nonatomic) IBOutlet UIView *BackgroundView;
 
 @end
 
@@ -37,6 +38,10 @@
     [[self.DescText layer] setCornerRadius:15];
     
     _list = [MarkerList getinstance];
+    
+    self.DescText.delegate = self;
+    self.CoordinateText.delegate = self;;
+    self.IdText.delegate = self;
     // Do any additional setup after loading the view.
 }
 
@@ -212,6 +217,15 @@
 - (IBAction)unwindToMain:(UIStoryboardSegue *)uiwindSegue{
     
     
+    
+}
+
+
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    
+    [self.view endEditing:YES];
     
 }
 
