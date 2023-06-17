@@ -44,9 +44,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="info" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="h9a-3W-mvt">
+                                <rect key="frame" x="20" y="46" width="60" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1a-WH-Bgi">
-                                <rect key="frame" x="170" y="666" width="75" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="170" y="572" width="75" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" backgroundImage="trash" catalog="system">
                                     <color key="titleColor" systemColor="systemRedColor"/>
@@ -55,10 +59,6 @@
                                     <action selector="DeleteClick:" destination="9mV-Fi-CJr" eventType="touchUpInside" id="TFe-Sq-FDw"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="info" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="h9a-3W-mvt">
-                                <rect key="frame" x="20" y="46" width="60" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1Ix-VE-pqP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
