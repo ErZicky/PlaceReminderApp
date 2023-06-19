@@ -2,7 +2,7 @@
 Un app per salvare marker  geografici fatta in xcode per l'esame di programmazione di sistemi mobili
 
 # Struttura
-I file principali (I vieww controller, storyboard ecc) sono presenti nella cartella PlaceReminderApp/
+I file principali (I view controller, storyboard ecc) sono presenti nella cartella PlaceReminderApp/
 Ignorare la cartella (ImagesForReadMe)
 
 Le due classi MarkerCLass e MarkerList definiscono rispettivamente i singoli segnaposto salvabili e la lista di segnaposto, MarkerClass estende <MKAnnotation> (e implementa i relativi metodi) per permettere di aggiungerli come annotazioni su una mappa.
