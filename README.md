@@ -1,7 +1,7 @@
 # Daniele_Ziaco_PlaceReminderApp
 Un app per salvare marker  geografici fatta in xcode per l'esame di programmazione di sistemi mobili
 
-#Struttura
+# Struttura
 I file principali (I vieww controller, storyboard ecc) sono presenti nella cartella PlaceReminderApp/
 Ignorare la cartella (ImagesForReadMe)
 
@@ -17,7 +17,7 @@ Le due classi MarkerCLass e MarkerList definiscono rispettivamente i singoli seg
   (main.storyboard è contenuta nella cartella PlaceReminderApp/Base.Iproj)
   
 
-  #ScreenShots
+  # ScreenShots
   
   ![](https://github.com/ErZicky/Daniele_Ziaco_PlaceReminderApp/blob/main/ImagesForReadMe/screen%20(3).jpeg)
   
