@@ -23,7 +23,8 @@ Le due classi MarkerCLass e MarkerList definiscono rispettivamente i singoli seg
   
   ![](https://github.com/ErZicky/Daniele_Ziaco_PlaceReminderApp/blob/main/ImagesForReadMe/screen%20(3).jpeg)
   
-  Schermata per aggiungere un marker (View: Main, Controller: ViewController) cliccando sulla mappa è possibile vedere i marker come annotazioni sulla mappa oppure, cliccando sull'immagine della lista, come lista ordinata
+  Schermata per aggiungere un marker (View: Main, Controller: ViewController) cliccando sulla mappa è possibile vedere i marker come annotazioni sulla mappa oppure, cliccando sull'immagine della lista, come lista ordinata.
+  In caso la tastiera non sparisca nell'emulatore cliccando fuori da una textbox usare shift+command+k
   
   ![](https://github.com/ErZicky/Daniele_Ziaco_PlaceReminderApp/blob/main/ImagesForReadMe/screen%20(4).jpeg)
   
