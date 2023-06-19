@@ -13,8 +13,10 @@ Le due classi MarkerCLass e MarkerList definiscono rispettivamente i singoli seg
   - ListView
   - MapView
   - DetailsScreen
+
+ La mappa viene inizializzata di default su parma
   
-  (main.storyboard è contenuta nella cartella PlaceReminderApp/Base.Iproj)
+ (main.storyboard è contenuta nella cartella PlaceReminderApp/Base.Iproj)
   
 
   # ScreenShots
