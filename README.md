@@ -1,5 +1,5 @@
 # Daniele_Ziaco_PlaceReminderApp
-Un app per salvare marker  geografici fatta in xcode per l'esame di programmazione di sistemi mobili
+Un app per salvare marker  geografici fatta in xcode per l'esame di programmazione di sistemi mobili (matricola 317310)
 
 # Struttura
 I file principali (I view controller, storyboard ecc) sono presenti nella cartella PlaceReminderApp/
