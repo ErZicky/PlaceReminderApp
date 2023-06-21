@@ -77,7 +77,7 @@
 
 }
 
-/*-(IBAction)GetLocation:(id)sender{ funzione scartata per ottenere la posizione dell'utente
+/*-(IBAction)GetLocation:(id)sender{ funzione scartata per ottenere la posizione dell'utente in quanto non funzionante
     
     
     mapview.showsUserLocation = YES;
