@@ -73,6 +73,7 @@
     
     
     [list DeleteItem:[list GetMarkerIndex:selectedMarker]];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"MarkerEliminated" object:nil]; //mando una notifica che ho eliminato un marker
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
@@ -92,10 +93,5 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
-- (void)viewWillDisappear:(BOOL)animated { //mando una notifica quando sto chiudendo la scheda dettagli
-    [super viewWillDisappear:animated];
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"DetailsViewWillDisappear" object:nil];
-}
 
 @end
