@@ -22,7 +22,7 @@
     [super viewDidLoad];
     
     list = [MarkerList getinstance];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(detailsViewWillDisappear) name:@"DetailsViewWillDisappear" object:nil]; //creo un listener per la notifica di chiusura dei dettagli
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(detailsViewWillDisappear) name:@"MarkerEliminated" object:nil]; //creo un listener per la notifica di eliminazione marker
     
    /* int t = list.GetCount;
     
