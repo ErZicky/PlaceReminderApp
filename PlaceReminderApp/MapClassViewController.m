@@ -17,14 +17,14 @@
 
 @implementation MapClassViewController
 
-@synthesize mapview;
+@synthesize mapview;    
 @synthesize  list;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     list = [MarkerList getinstance];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(detailsViewWillDisappear) name:@"MarkerEliminated" object:nil]; //creo un listener per la notifica di eliminazione marker
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(MarkerWasDeleted) name:@"MarkerEliminated" object:nil]; //creo un listener per la notifica di eliminazione marker
     
     mapview.delegate = self;
     
@@ -147,9 +147,9 @@
 
 
 
-- (void)detailsViewWillDisappear {
+- (void)MarkerWasDeleted {
     
-    [self CreateAnnotations]; //quando ricevo la notifica di chiusura dei dettagli ricreo i pin in caso uno sia stato eliminato
+    [self CreateAnnotations]; //quando ricevo la notifica di eliminazione di un marker aggiorno la tabella
 }
 
 - (void)dealloc {

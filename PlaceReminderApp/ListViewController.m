@@ -22,7 +22,7 @@
     [super viewDidLoad];
     
     list = [MarkerList getinstance];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(detailsViewWillDisappear) name:@"MarkerEliminated" object:nil]; //creo un listener per la notifica di eliminazione marker
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(MarkerWasDeleted) name:@"MarkerEliminated" object:nil]; //creo un listener per la notifica di eliminazione marker
     
    /* int t = list.GetCount;
     
@@ -35,7 +35,7 @@
     return [list GetCount];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath { //creo le celle
     static NSString *cellIdentifier = @"MarkerCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
@@ -85,9 +85,9 @@
     [self.tableview reloadData];
 }
 
-- (void)detailsViewWillDisappear {
+- (void)MarkerWasDeleted {
     
-    [self RecreateTable]; //quando ricevo rilevo la notifica di chiusura dei dettagli aggiorno la tabella in caso sia stato eliminato un marker
+    [self RecreateTable]; //quando ricevo la notifica di eliminazione di un marker aggiorno la tabella
 }
 
 - (void)dealloc {
