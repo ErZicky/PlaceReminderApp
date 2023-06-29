@@ -24,9 +24,6 @@
     list = [MarkerList getinstance];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(MarkerWasDeleted) name:@"MarkerEliminated" object:nil]; //creo un listener per la notifica di eliminazione marker
     
-   /* int t = list.GetCount;
-    
-    NSLog(@"%d", t);*/
     
     
 }
@@ -52,32 +49,39 @@
 
 - (NSString *)stringFromDate:(NSDate *)date {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    [dateFormatter setDateFormat:@"dd-MM-yyyy HH:mm"];
     return [dateFormatter stringFromDate:date];
 }
 
 
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath { //apro la vista dei dettagli passando il Marker cliccato corrispondente
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath { //aggiungo DetailsView al navigation controller programmaticamente
     
     NSInteger reversedIndex = [list GetCount] - indexPath.row - 1;
        
-    MarkerClass *selectedMarker = [list GetItem:reversedIndex]; //prendo l'index dell'elemento cliccato tenendo a mente che la lista viene visualizzata al contrario
        
     
-    // Apro la storyboard dei dettagli
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"DetailsScreen" bundle:nil];
-    UIViewController *detailsViewController = [storyboard instantiateViewControllerWithIdentifier:@"DetailsView"];
+    // Apro la schermata dei dettagli
+    UIViewController *detailsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailsView"];
     
     
-    // passo il MarkerClass cliccato
-        DetailsView *destinationViewController = (DetailsView *)detailsViewController;
-        
-        destinationViewController.selectedMarker = selectedMarker;
     
+    DetailsView *DSV = (DetailsView *)detailsViewController;
+    [DSV setSelectedMarkerIndex:reversedIndex]; //tramite il suo setter passo l'index del marker corrispondente alla cella a detailsview
     
-    [self presentViewController:detailsViewController animated:YES completion:nil];
+    [self.navigationController pushViewController:detailsViewController animated:YES]; //effettuo il push della schermata dei dettagli sullo stack
 }
+
+
+/*- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{ //preparo il segue
+    
+    if([[segue identifier] isEqual:@"DetailsView"])
+    {
+        DetailsView *DSV = [segue destinationViewController];
+        [DSV setSelectedMarkerIndex:indexselected];
+    }
+    
+}*/
 
 
  - (void) RecreateTable //aggiorno la tabella dopo che i dettagli vengono chiusi

@@ -9,9 +9,8 @@
 /* Begin PBXBuildFile section */
 		1224D63B2A37CAAD00F6EACF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1224D63A2A37CAAD00F6EACF /* MapKit.framework */; };
 		1224D63E2A37CE7800F6EACF /* MapClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1224D63D2A37CE7800F6EACF /* MapClassViewController.m */; };
-		1224D6462A37CEDE00F6EACF /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1224D6452A37CEDE00F6EACF /* MapView.storyboard */; };
+		122AAC472A4D959A00202E44 /* NavigationContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 122AAC462A4D959A00202E44 /* NavigationContoller.m */; };
 		1237E69C2A3C770800F9565E /* DetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1237E69B2A3C770800F9565E /* DetailsView.m */; };
-		1237E6A42A3C773900F9565E /* DetailsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1237E6A32A3C773900F9565E /* DetailsScreen.storyboard */; };
 		123B484F2A39EB7A00B64C64 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 123B484E2A39EB7A00B64C64 /* ListViewController.m */; };
 		124345FA2A3880A800EF334B /* MarkerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 124345F92A3880A800EF334B /* MarkerClass.m */; };
 		124346002A389CF600EF334B /* MarkerList.m in Sources */ = {isa = PBXBuildFile; fileRef = 124345FF2A389CF600EF334B /* MarkerList.m */; };
@@ -47,10 +46,10 @@
 		1224D63A2A37CAAD00F6EACF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1224D63C2A37CE7800F6EACF /* MapClassViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapClassViewController.h; sourceTree = "<group>"; };
 		1224D63D2A37CE7800F6EACF /* MapClassViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapClassViewController.m; sourceTree = "<group>"; };
-		1224D6452A37CEDE00F6EACF /* MapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
+		122AAC452A4D959A00202E44 /* NavigationContoller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationContoller.h; sourceTree = "<group>"; };
+		122AAC462A4D959A00202E44 /* NavigationContoller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationContoller.m; sourceTree = "<group>"; };
 		1237E69A2A3C770800F9565E /* DetailsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsView.h; sourceTree = "<group>"; };
 		1237E69B2A3C770800F9565E /* DetailsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsView.m; sourceTree = "<group>"; };
-		1237E6A32A3C773900F9565E /* DetailsScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsScreen.storyboard; sourceTree = "<group>"; };
 		123B484D2A39EB7A00B64C64 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		123B484E2A39EB7A00B64C64 /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		124345F82A3880A800EF334B /* MarkerClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkerClass.h; sourceTree = "<group>"; };
@@ -148,7 +147,6 @@
 				12EE41D72A37243100B929D1 /* Assets.xcassets */,
 				1224D63C2A37CE7800F6EACF /* MapClassViewController.h */,
 				1224D63D2A37CE7800F6EACF /* MapClassViewController.m */,
-				1224D6452A37CEDE00F6EACF /* MapView.storyboard */,
 				124345F82A3880A800EF334B /* MarkerClass.h */,
 				124345F92A3880A800EF334B /* MarkerClass.m */,
 				124345FE2A389CF500EF334B /* MarkerList.h */,
@@ -157,7 +155,8 @@
 				123B484E2A39EB7A00B64C64 /* ListViewController.m */,
 				1237E69A2A3C770800F9565E /* DetailsView.h */,
 				1237E69B2A3C770800F9565E /* DetailsView.m */,
-				1237E6A32A3C773900F9565E /* DetailsScreen.storyboard */,
+				122AAC452A4D959A00202E44 /* NavigationContoller.h */,
+				122AAC462A4D959A00202E44 /* NavigationContoller.m */,
 			);
 			path = PlaceReminderApp;
 			sourceTree = "<group>";
@@ -284,9 +283,7 @@
 			files = (
 				12EE41DB2A37243100B929D1 /* LaunchScreen.storyboard in Resources */,
 				12EE41D82A37243100B929D1 /* Assets.xcassets in Resources */,
-				1224D6462A37CEDE00F6EACF /* MapView.storyboard in Resources */,
 				12EE41D62A37242F00B929D1 /* Main.storyboard in Resources */,
-				1237E6A42A3C773900F9565E /* DetailsScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +316,7 @@
 				12EE41CD2A37242F00B929D1 /* AppDelegate.m in Sources */,
 				124346002A389CF600EF334B /* MarkerList.m in Sources */,
 				12EE41DE2A37243100B929D1 /* main.m in Sources */,
+				122AAC472A4D959A00202E44 /* NavigationContoller.m in Sources */,
 				12EE41D02A37242F00B929D1 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

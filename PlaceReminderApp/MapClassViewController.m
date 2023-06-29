@@ -32,21 +32,13 @@
     MKCoordinateRegion region = { {0.0, 0.0}, {0.0, 0.0}};
     region.center.latitude = 44.801485;
     region.center.longitude = 10.3279036;
-    region.span.longitudeDelta = 0.2f;
-    region.span.latitudeDelta = 0.2f;
+    region.span.longitudeDelta = 0.1f;
+    region.span.latitudeDelta = 0.1f;
     [mapview setRegion:region animated:YES];
     
     
     
     [self CreateAnnotations];
-
-
-    
-   
-    
-    
-    
-    
  
 
 }
@@ -93,15 +85,6 @@
 }
 */
 
-- (IBAction)GoBackClick:(id)sender {
-    
-    /*UIStoryboard *MainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *MainController = [MainStoryBoard instantiateViewControllerWithIdentifier:@"ViewController"];
-    [self presentViewController:MainController animated:NO completion:nil];*/
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
-}
 
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
@@ -123,23 +106,19 @@
 }
 
 
-- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control { //intercetto l'azione di cliccare la "i" nel pin
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control { //intercetto l'azione di cliccare la "i" nel pin e aggiungo DetailsView al navigation controller programmaticamente
     if ([view.annotation isKindOfClass:[MarkerClass class]]) {
         
-        MarkerClass *marker = (MarkerClass *)view.annotation; //ottengo il MarkerClass associato a quel pin
+        MarkerClass *marker = (MarkerClass *)view.annotation; //ottengo il MarkerClass associato a quel pin e il suo index
         
-        //apro la scheda dei dettagli
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"DetailsScreen" bundle:nil];
-        UIViewController *detailsViewController = [storyboard instantiateViewControllerWithIdentifier:@"DetailsView"];
+        NSInteger selectedindex = [list GetMarkerIndex:marker];
         
         
-        // passo il MarkerClass cliccato
-            DetailsView *destinationViewController = (DetailsView *)detailsViewController;
-            
-            destinationViewController.selectedMarker = marker;
+        UIViewController *detailsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailsView"];
+        DetailsView *DSV = (DetailsView *)detailsViewController;
+        [DSV setSelectedMarkerIndex:selectedindex]; //tramite il suo setter passo l'index del marker corrispondente al pin a detailsview
         
-        //apro il pannello dei dettagli
-        [self presentViewController:detailsViewController animated:YES completion:nil];
+        [self.navigationController pushViewController:detailsViewController animated:YES]; //effettuo il push della schermata dei dettagli sullo stack
         
         
     }

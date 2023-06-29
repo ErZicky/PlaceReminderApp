@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DetailsView : UIViewController
 
-@property (strong, nonatomic) MarkerClass *selectedMarker;
+@property (assign, nonatomic) NSInteger *selectedMarkerIndex;
 @end
 
 NS_ASSUME_NONNULL_END

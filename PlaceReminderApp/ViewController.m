@@ -95,8 +95,20 @@
                     addr = address;
                     NSLog(addr);
                     
+                    //se non viene fornito un identificativo viene ricavato dall'indirizzo
+                    NSString *nametoset;
+                    if([_IdText.text  isEqual: @""] || [_IdText.text  isEqual: @" "] || [_IdText.text  isEqual: @"Identificativo"])
+                    {
+                        nametoset = @"segnaposto vicino a: ";
+                        nametoset = [nametoset stringByAppendingString:placemark.locality];
+                    }
+                    else
+                    {
+                        nametoset = _IdText.text;
+                    }
+                    
                     //creo marker e lo aggiungo alla lista
-                    MarkerClass *_Marker = [[MarkerClass alloc] initWithElements:cords name:_IdText.text desc:_DescText.text address:addr date:[NSDate date]];
+                    MarkerClass *_Marker = [[MarkerClass alloc] initWithElements:cords name:nametoset desc:_DescText.text address:addr date:[NSDate date]];
                  
                     if(self->_list != nil)
                     {
@@ -116,10 +128,9 @@
     }
     else
     {
-        //else if (addressMatch)
         //è un indirizzo
         
-        //converto coordinate in indirizzo
+        //converto indirizzo in coordinate
        addr = input;
         NSLog(@"indirizzo scritto: %@", addr);
         
@@ -139,8 +150,20 @@
                 NSLog(@"Latitude: %f, Longitude: %f", cords.latitude, cords.longitude);
                 
                 
+                //se non viene fornito un identificativo viene ricavato dall'indirizzo
+                NSString *nametoset;
+                if([_IdText.text  isEqual: @""] || [_IdText.text  isEqual: @" "] || [_IdText.text  isEqual: @"Identificativo"])
+                {
+                    nametoset = @"segnaposto vicino a: ";
+                    nametoset = [nametoset stringByAppendingString:placemark.locality];
+                }
+                else
+                {
+                    nametoset = _IdText.text;
+                }
+                
                 //creo marker e lo aggiungo alla lista
-                MarkerClass *_Marker = [[MarkerClass alloc] initWithElements:cords name:_IdText.text desc:_DescText.text address:addr date:[NSDate date]];
+                MarkerClass *_Marker = [[MarkerClass alloc] initWithElements:cords name:nametoset desc:_DescText.text address:addr date:[NSDate date]];
 
              
                 if(_list != nil)

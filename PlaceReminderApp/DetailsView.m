@@ -20,13 +20,15 @@
 
 @implementation DetailsView
 
-@synthesize selectedMarker;
+@synthesize selectedMarkerIndex;
 @synthesize list;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     list = [MarkerList getinstance];
+    MarkerClass *selectedMarker = [list GetItem:selectedMarkerIndex];
+    
     _TitleLabel.text = selectedMarker.name;
     _DescLabel.text = selectedMarker.desc;
     _addrLabel.text = selectedMarker.address;
@@ -72,14 +74,14 @@
     
     
     
-    [list DeleteItem:[list GetMarkerIndex:selectedMarker]];
+    [list DeleteItem:selectedMarkerIndex];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"MarkerEliminated" object:nil]; //mando una notifica che ho eliminato un marker
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [self.navigationController popViewControllerAnimated:YES]; //effettuo il pop di questo controller dallo stack del navigationcontroller dopo l'eliminazione
     
 }
 
-
-- (void)showDeletedAlert {
+- (void) showDeletedAlert {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Attention:"
                                                                              message:@"Marker Deleted"
                                                                       preferredStyle:UIAlertControllerStyleAlert];
