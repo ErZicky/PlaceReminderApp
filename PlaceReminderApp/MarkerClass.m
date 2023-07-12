@@ -29,6 +29,18 @@
 
 }
 
+
+- (NSString *)GetName {
+    return  self.name;
+}
+ 
+
+- (NSDate *)GetDate {
+    return self.date;
+    
+}
+
+
 //funzioni necessarie per far apparire il testo nel pin
 - (NSString *)title {
     return self.name;
