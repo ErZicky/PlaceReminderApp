@@ -25,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString* address;
 - (NSString *)title;
 - (NSString *)subtitle;
+- (NSString *)GetName;
+- (NSDate *)GetDate;
 
 @end
 
