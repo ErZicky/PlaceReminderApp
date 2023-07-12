@@ -41,8 +41,8 @@
     
     NSInteger reversedIndex = [list GetCount] - indexPath.row - 1; //flippo la lista per avere l'ultimo elemento aggiunto in cima
     MarkerClass *marker = [list GetItem:reversedIndex];
-    cell.textLabel.text = marker.name;
-    cell.detailTextLabel.text = [self stringFromDate:marker.date];
+    cell.textLabel.text = [marker GetName];
+    cell.detailTextLabel.text = [self stringFromDate:[marker GetDate]];
     
     return cell;
 }
