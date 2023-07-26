@@ -4,7 +4,7 @@ An app made with Xcode and Objective C for the mobile programming exam, where yo
 
 # Structure
 The main files (view controllers, storyboards etc) are present in the PlaceReminderApp/ folder
-Ignore folder (ImagesForReadMe)
+Ignore folder "ImagesForReadMe"
 
 The two classes MarkerCLass and MarkerList respectively define the individual savable placeholders and the list of placeholders, MarkerClass extends MKAnnotation (and implements the related methods) to allow you to add them as annotations on a map.
   
