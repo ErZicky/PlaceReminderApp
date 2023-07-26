@@ -1,4 +1,4 @@
-#PlaceReminderApp
+# PlaceReminderApp
 
 An app made with Xcode and Objective C for the mobile programming exam, where you can insert location (either with coordinates or address), save them and view them either on a map or in a list
 
