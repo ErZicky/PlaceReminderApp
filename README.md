@@ -1,40 +1,40 @@
-# Daniele_Ziaco_PlaceReminderApp
-Daniele Ziaco (Matricola 317310)
-Un app per salvare marker  geografici fatta in xcode per l'esame di programmazione di sistemi mobili
+#PlaceReminderApp
 
-# Struttura
-I file principali (I view controller, storyboard ecc) sono presenti nella cartella PlaceReminderApp/
-Ignorare la cartella (ImagesForReadMe)
+An app made with Xcode and Objective C for the mobile programming exam, where you can insert location (either with coordinates or address), save them and view them either on a map or in a list
 
-Le due classi MarkerCLass e MarkerList definiscono rispettivamente i singoli segnaposto salvabili e la lista di segnaposto, MarkerClass estende MKAnnotation (e implementa i relativi metodi) per permettere di aggiungerli come annotazioni su una mappa.
-  
- ViewController, ListViewController, MapClassViewController e DetailsView sono i controller rispettivamente delle seguenti viste:
-  
-  - Main
-  - ListView
-  - MapView
-  - DetailsScreen
+# Structure
+The main files (view controllers, storyboards etc) are present in the PlaceReminderApp/ folder
+Ignore folder (ImagesForReadMe)
 
- La mappa viene inizializzata di default su Parma
+The two classes MarkerCLass and MarkerList respectively define the individual savable placeholders and the list of placeholders, MarkerClass extends MKAnnotation (and implements the related methods) to allow you to add them as annotations on a map.
   
- (main.storyboard è contenuta nella cartella PlaceReminderApp/Base.Iproj)
+  ViewController, ListViewController, MapClassViewController and DetailsView are the controllers of the following views respectively:
+  
+   - Main
+   - ListView
+   - MapView
+   - DetailsScreen
+
+  The map is initialized by default on Parma
+  
+  (main.storyboard is contained in the PlaceReminderApp/Base.Iproj folder)
   
 
-  # ScreenShots
+  # ScreenShots (outdated)
   
   ![](https://github.com/ErZicky/Daniele_Ziaco_PlaceReminderApp/blob/main/ImagesForReadMe/screen%20(3).jpeg)
   
-  Schermata per aggiungere un marker (View: Main, Controller: ViewController) cliccando sulla mappa è possibile vedere i marker come annotazioni sulla mappa oppure, cliccando sull'immagine della lista, come lista ordinata.
-  In caso la tastiera non sparisca nell'emulatore cliccando fuori da una textbox usare shift+command+k
+Screen to add a marker (View: Main, Controller: ViewController) by clicking on the map it is possible to see the markers as annotations on the map or, by clicking on the image of the list, as an ordered list.
+In case the keyboard doesn't disappear in the emulator when clicking outside a textbox use shift+command+k
   
   ![](https://github.com/ErZicky/Daniele_Ziaco_PlaceReminderApp/blob/main/ImagesForReadMe/screen%20(4).jpeg)
   
-  Schermata dellla mappa (View: MapView nella rispettiva storyboard, Controller: MapClassViewController), cliccando sulla "i" è possibile vedere tutte le informazioni relative al marker
+Map screen (Controller: MapClassViewController), clicking on the "i" you can see all the information related to the marker
   
   ![](https://github.com/ErZicky/Daniele_Ziaco_PlaceReminderApp/blob/main/ImagesForReadMe/screen%20(1).jpeg)
   
-  Schermata lista (View: ListView nella storyboard main.storyboard, Controller: ListViewController), la lista è ordinata dall'elemento più recente, cliccando su una cella è possibile vedere tutte le informazioni
+List screen (Controller: ListViewController), the list is sorted by the most recent item, clicking on a cell you can see all the information
   
   ![](https://github.com/ErZicky/Daniele_Ziaco_PlaceReminderApp/blob/main/ImagesForReadMe/screen%20(2).jpeg)
   
-  Schermata dei dettagli dove è possibile vedere tutte le informazini di una marker (View: Detailsview nella rispettiva storyboard, Controller:DetailsView) qui è possibile anche eliminare il marker
+ Details view where you can see all information of a marker (Controller:DetailsView) here you can also delete the marker
